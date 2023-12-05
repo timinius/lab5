@@ -5,8 +5,16 @@ import os
 
 root = Tk()
 def btn_click():
+    if textInput.get() == '' and numInput.get() != '':
+        messagebox.showerror(title='Ошибка', message='Введите текст')
+    if numInput.get() == '' and textInput.get() != '':
+        messagebox.showerror(title='Ошибка', message='Введите сдвиг')
+    if numInput.get() == '' and textInput.get() == '':
+        messagebox.showerror(title='Ошибка', message='Введите текст и сдвиг')
+
     text = textInput.get()
     num = int(numInput.get())
+
     list_text = list(text)
     list_text1 = list(text)
     alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у',
@@ -25,8 +33,16 @@ def btn_click():
     textOutput.insert(0, ''.join(list_text))
 
 def btn_click1():
+    if textInput.get() == '' and numInput.get() != '':
+        messagebox.showerror(title='Ошибка', message='Введите текст')
+    if numInput.get() == '' and textInput.get() != '':
+        messagebox.showerror(title='Ошибка', message='Введите сдвиг')
+    if numInput.get() == '' and textInput.get() == '':
+        messagebox.showerror(title='Ошибка', message='Введите текст и сдвиг')
+
     text = textInput.get()
     num = int(numInput.get())
+    
     list_text1 = list(text)
     alphabet = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у',
                 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я', 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з',
